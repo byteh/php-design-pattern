@@ -8,11 +8,14 @@ spl_autoload_register(function ($class_name) {
 $commConfA = new CommonConf();
 $commConfA->initConf(AbstractPhoneConf::PROVIDER_NAME_A);
 $commConfA->createConf();
+$commConfA->setTimer(15);
 $commConfA->closeConf();
-var_dump($commConfA);
+//var_dump($commConfA);
 
+echo "\n";
 $commConfB = new CommonConf();
 $commConfB->initConf(AbstractPhoneConf::PROVIDER_NAME_B);
 $commConfB->createConf();
+$commConfA->setTimer(20);
 $commConfB->closeConf();
-var_dump($commConfB);
+//var_dump($commConfB);
